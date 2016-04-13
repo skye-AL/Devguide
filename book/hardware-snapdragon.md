@@ -122,6 +122,9 @@ tty-4 bam-2
 | 5 | GND | GND | |
 | 6 | I2C9_SCL | SPI9_CLK | |
 
+#### Note on SPI usage
+With the given DSPAL it is not possible to set the SPI mode. Only the default mode can be used which is SPIPOL = 1 and SPIPH=1 (clock is high when inactive and data is valid clock trailing edge). Be aware of pullup resistors for the I2C pins. Therefore, only ```/dev/spi-8``` which is on J12 was tested.
+
 ## Peripherals
 
 ### UART to Pixracer / Pixfalcon Wiring
